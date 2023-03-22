@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/baseCss.css" />
+    <link rel="shortcut icon" href="/images/Logo-Backing.png" />
+    <title>Home Page</title>
+  </head>
+
+  <header>
+    <ul class="navigation">
+      <li>
+        <a href=""
+          ><img src="/images/Logo-White.png" width="50em" height="50em"
+        /></a>
+      </li>
+      <li><a href="/pages/projects.html">Projects</a></li>
+      <li><a href="/pages/experience.html">Experience</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Contact me</a>
+        <div class="dropdown-content">
+          <a href="https://github.com/Roger-ODonnell"
+            >Github<img
+              src="images/github-logo.png"
+              alt="LinkedIn Logo"
+              width="20em"
+              height="20em"
+          /></a>
+          <a href="https://www.linkedin.com/in/roger-o-donnell-0bb1821b7/"
+            >LinkedIn<img
+              src="images/linkedin-logo.svg"
+              alt="LinkedIn Logo"
+              width="20em"
+              height="20em"
+          /></a>
+          <a href="mailto: rogerodonnell18@gmail.com"
+            >Email me!<img
+              src="/images/email-icon.png"
+              alt="Email Logo"
+              width="20em"
+              height="20em"
+          /></a>
+        </div>
+      </li>
+    </ul>
+  </header>
+
+  <body>
+    <div class="Main-Content">
+      <div class="main-header">
+        <h1>Welcome to my <span>portfolio!</span></h1>
+      </div>
+
+      <section class="about-me">
+        <h2>About Me!</h2>
+        <br />
+        <p class="text">
+          Hi, I'm <span>Roger O'Donnell.</span><br />
+          I am a nineteen year old software development student!<br />
+          My original dream was to push for game development but then I came
+          across Web development<br />
+          and I found it a very intriguing and cool path to take on my way to
+          becoming a Game Developer in the future.
+        </p>
+      </section>
+      <section class="web-design">
+        <h2>Web Design!</h2>
+        <br />
+        <p class="text">
+          Why <span>Web Design..</span><br />
+          Web design for me was attractive because its virtually limitless,<br />
+          Since starting Im always striving for unique designs, fast loading and
+          great usability.<br />
+          Im always looking for new tests and learning experiences in this
+          space!
+        </p>
+        <a href="pages/contact.html"
+          ><input
+            type="button"
+            class="enquire"
+            name="enquire"
+            value="Enquire Today!"
+        /></a>
+      </section>
+
+      <section class="xml">
+        <div id="xml-content">
+          <h2>Learn About Web Development(XMLHTTP Request)</h2>
+          <button type="button" onclick="loadXMLDoc()">
+            Learn About Web Design
+          </button>
+          <div id="content"></div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h2>My Location</h2>
+          <button onclick="getLocation()">Try It</button>
+          <div id="demo"></div>
+        </div>
+      </section>
+    </div>
+    <script>
+      //Loading XML doc for content on line 91
+      function loadXMLDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("content").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "About-Web-Design.txt", true);
+        xhttp.send();
+      }
+
+      //Service worker Implementation
+      if (navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.register("sw.js");
+      }
+    </script>
+  </body>
+</html>

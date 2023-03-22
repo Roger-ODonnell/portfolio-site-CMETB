@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/baseCss.css">
+    <title>Contact Us</title>
+  </head>
+
+  <body>
+    <header>
+        <ul class="navigation">
+          <li><a href="../index.html"><img src="../images/Logo-White.png" width="50em" height="50em"></a></li>
+          <li><a href="../pages/projects.html">Projects</a></li>
+          <li><a href="../pages/experience.html">Experience</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Contact me</a>
+            <div class="dropdown-content">
+              <a href="https://github.com/Roger-ODonnell">Github<img src="../images/github-logo.png" alt="LinkedIn Logo" width="20em" height="20em"/></a>
+              <a href="https://www.linkedin.com/in/roger-o-donnell-0bb1821b7/">LinkedIn<img src="../images/linkedin-logo.svg" alt="LinkedIn Logo" width="20em" height="20em"/></a>
+              <a href="mailto: rogerodonnell18@gmail.com">Email me!<img src="../images/email-icon.png" alt="Email Logo" width="20em" height="20em"/></a>
+            </div>
+          </li>
+        </ul>
+    </header>
+    
+    <div class="Main-Content">
+
+        <div class="main-header">
+         <h1>Enquire Today!</h1>
+        </div>
+        
+        <div class="form">
+            <form id="myForm" action="https://formsubmit.co/rogerodonnell18@gmail.com" method="POST" validate>
+                <h3>Your Details</h3>
+                <input required type="text" id="fname" name="name" placeholder="Your Name">
+                <div class="field-error"></div><br>
+                <input required type="text" id="lname" name="lastName" placeholder="Your Surname">
+                <div class="field-error"></div><br>
+                <input required type="email" id="email" name="email" placeholder="Your Email">
+                <div class="field-error"></div><br>
+                <textarea required id="subject" name="subject" placeholder="Briefly summarise your website needs!" style="height: 100px;"></textarea>
+                <div class="field-error"></div>
+                <input type="hidden" name="_next" value="https://rogerodonnell.ie/pages/thanks.html">
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </div>
+    <div>
+
+        <script src="../js/form.js"></script>
+  </body>
+</html>

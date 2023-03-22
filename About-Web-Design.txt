@@ -1,0 +1,7 @@
+What is website development? Website development is a catch-all term for the work that goes into building a website. This includes everything from markup and coding to scripting, network configuration, and CMS development.
+Why is web development important?
+The Internet isn’t going anywhere. In fact, it’s become a portal and primary method of research, connection, education, and entertainment in the world. As of 2021, there were 4.66 billion global Internet users — more than half the world’s population.
+
+Given the rapidly-increasing number of Internet users, it’s no surprise that web development is a rapidly expanding industry. Between now and 2030, the employment of web developers is expected to grow by 13%, much faster than most other technology careers.
+(Sourced from HubSpot)
+https://blog.hubspot.com/website/website-development?hubs_content=blog.hubspot.com%2Fwebsite%2Fwebsite-development&hubs_content-cta=hsg-chapters__link

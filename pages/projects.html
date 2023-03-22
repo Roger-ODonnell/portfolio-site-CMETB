@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/baseCss.css" />
+    <link rel="shortcut icon" href="../images/frontend.png" />
+    <title>Projects</title>
+  </head>
+  <body>
+    <header>
+      <ul class="navigation">
+        <li>
+          <a href="../index.html"
+            ><img src="../images/Logo-White.png" width="50em" height="50em"
+          /></a>
+        </li>
+        <li><a href="../pages/projects.html">Projects</a></li>
+        <li><a href="../pages/experience.html">Experience</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Contact me</a>
+          <div class="dropdown-content">
+            <a href="https://github.com/Roger-ODonnell"
+              >Github<img
+                src="../images/github-logo.png"
+                alt="LinkedIn Logo"
+                width="20em"
+                height="20em"
+            /></a>
+            <a href="https://www.linkedin.com/in/roger-o-donnell-0bb1821b7/"
+              >LinkedIn<img
+                src="../images/linkedin-logo.svg"
+                alt="LinkedIn Logo"
+                width="20em"
+                height="20em"
+            /></a>
+            <a href="mailto: rogerodonnell18@gmail.com"
+              >Email me!<img
+                src="../images/email-icon.png"
+                alt="Email Logo"
+                width="20em"
+                height="20em"
+            /></a>
+          </div>
+        </li>
+      </ul>
+    </header>
+
+    <div class="Main-Content">
+      <div class="main-header">
+        <h1>Projects!</h1>
+
+        <div class="project">
+          <h2>Tourism Site</h2>
+          <p>
+            For this project, it was my first of the Web development journey, it
+            was based off a tourism site for Galway City!<br />
+            Though basic in design and use it gave me great fundementals to help
+            me further my skill's in web developement.<br />
+            <strong
+              >View a demo here:
+              <a target="blank" href="https://tourismgalway.onrender.com/"
+                >Galway Tourism Site</a
+              ><br
+            /></strong>
+          </p>
+          <img src="../images/Project1.png" alt="Project 1 image" />
+        </div>
+
+        <div class="project">
+          <h2>Café Zero</h2>
+          <p>
+            This is my current work in progress, "Café Zero", this café is
+            fictional but a design ive been looking to do since I started<br />
+            It has a nice homey feel to it and is easy on the eyes, responsive
+            and perfect for any business looking to reach a calm clientele.<br />
+            <strong
+              >View a demo here:
+              <a target="blank" href="https://cafezero.onrender.com"
+                >Café Zero Site</a
+              ><br
+            /></strong>
+          </p>
+          <img src="../images/café.png" alt="Project 2 image" />
+        </div>
+
+        <div class="project">
+          <h2>Chat System</h2>
+          <p>
+            This is a Chat System between two clients using Socket.io, I plan to
+            add many more features such as private messaging and persistent
+            usernames<br />
+            in the future.
+            <strong
+              >View the repo here:
+              <a
+                target="blank"
+                href="https://github.com/Roger-ODonnell/socket-io-Chat-System"
+                >Chat System Repo</a
+              ><br
+            /></strong>
+          </p>
+          <img src="../images/chatPage.png" alt="Project 3 image" />
+        </div>
+
+        <div class="project">
+          <h2>Geo-location API</h2>
+          <p>
+            This is a sample of a GeoLocation API used in html pages,<br />it
+            allows the user to click a button and display their current
+            longitude and latitude.
+          </p>
+          <button class="API-button" onclick="getLocation()">Find me!</button>
+          <div id="location"></div>
+        </div>
+
+        <div class="project">
+          <div class="worker">
+            <h2>Web Worker Counter</h2>
+            <p>Count numbers: <output id="count"></output></p>
+            <button onclick="startWorker()">Start Worker</button> 
+            <button onclick="stopWorker()">Stop Worker</button>   
+          </div>
+        </div>
+
+    <script>
+      var x = document.getElementById("location");
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+    </script>
+
+    <script>
+      var worker;
+
+     function startWorker() {
+      if(typeof(Worker) !== "undefined") {
+      if(typeof(worker) == "undefined") {
+      worker = new Worker("../js/worker.js");
+    }
+    worker.onmessage = function(event) {
+      document.getElementById("count").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("count").innerHTML = "Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker() { 
+  worker.terminate();
+  worker = undefined;
+}
+    </script>
+  </body>
+</html>
