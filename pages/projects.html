@@ -86,25 +86,6 @@
         </div>
 
         <div class="project">
-          <h2>Chat System</h2>
-          <p>
-            This is a Chat System between two clients using Socket.io, I plan to
-            add many more features such as private messaging and persistent
-            usernames<br />
-            in the future.
-            <strong
-              >View the repo here:
-              <a
-                target="blank"
-                href="https://github.com/Roger-ODonnell/socket-io-Chat-System"
-                >Chat System Repo</a
-              ><br
-            /></strong>
-          </p>
-          <img src="../images/chatPage.png" alt="Project 3 image" />
-        </div>
-
-        <div class="project">
           <h2>Geo-location API</h2>
           <p>
             This is a sample of a GeoLocation API used in html pages,<br />it
@@ -121,6 +102,20 @@
             <p>Count numbers: <output id="count"></output></p>
             <button onclick="startWorker()">Start Worker</button> 
             <button onclick="stopWorker()">Stop Worker</button>   
+          </div>
+        </div>
+
+        <div class="project">
+          <div>
+            <h2>Canvas Wih JS</h2>  
+            <canvas id="canvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+          </div>
+        </div>
+
+        <div class="project">
+          <div>
+            <h2>Web Socket Test Page</h2>  
+            <a class="button" href="/pages/socket.io/chat.html"><button>To Chat Page</button></a>
           </div>
         </div>
 
@@ -164,5 +159,13 @@ function stopWorker() {
   worker = undefined;
 }
     </script>
+
+ <script>
+  var c = document.getElementById("canvas");
+  var ctx = c.getContext("2d");
+  ctx.moveTo(0,0);
+  ctx.lineTo(200,100);
+  ctx.stroke();
+  </script>
   </body>
 </html>

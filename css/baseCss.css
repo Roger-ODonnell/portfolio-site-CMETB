@@ -453,3 +453,13 @@ span {
 .worker button:hover{
   scale: 1.2;
 }
+#canvas{
+  background-color: #666464;
+}
+button{
+  background-color: #000000;
+  color: white;
+  padding: 1em 1em;
+  border: solid purple;
+  margin: 1em 1em;
+}
